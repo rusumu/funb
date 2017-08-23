@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/soal.js"></script>
+    <style type="text/css">
+  #welcome{
+  background-color:#DC143C; color:#FFF8DC;
+  padding: 15px; font-size: 12pt; font-weight: bold;
+  text-align: center;
+  }
+  #soal{
+  min-height:200px; background: #EEEEEE; color: #222222;
+  }
+  
+  #jawabanmu{min-height: 20px;}
+  ul{list-style-type:none;}
+  ul li p{ margin: 1px 0 1px 0; padding: 2px;}
+  </style>
+</head>
+<body>
+	<div id='welcome'>
+	Selamat Mengerjakan, Siswa <span id='nis'></span>
+	</div>
+	<button class='btn btn-primary form-control' id="Mulai">Mulai Soal</button>
+	<ul id="soal">
+	</ul>
+	<button class='btn btn-primary form-control' id='jawab'>JAWAB</button>
+	<div id = "jawabanmu"></div>
+	<br />
+	<a href=# class='btn btn-success form-control' id="soalBerikut">Soal Berikut</a>
+</body>
+</html>

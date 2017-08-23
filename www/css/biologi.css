@@ -1,0 +1,11 @@
+#LoginResult{display:none;}
+#biologo{width: 60%; max-width: 400px;margin:20px auto;}
+#biologo img{width: 98%;}
+.pageHeader{
+	background: #ff0000;
+	color: #ffffff;
+	text-align: center;
+	padding: 20px;
+	font-size: 20pt;
+	font-weight:bolder;
+}
