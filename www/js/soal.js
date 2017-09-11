@@ -4,18 +4,18 @@ $ ('document').ready(function(){
 	var bab=localStorage.getItem('bab');
 	$("#Mulai").click(function(){
 		/******fungsi getjson ******/
-		$.getJSON('http://rusiamee.000webhostapp.com/biologi/soal.php?b='+bab+'&n=1&nis='+nis, function (data){
+		$.getJSON('http://klubaners.web.id/biologi/soal.php?b='+bab+'&n=1&nis='+nis, function (data){
 			//wadah dari id soal
 			$("#soal li").remove ();
 			$.each(data,function(index,soal){
 				$('#soal').append("<li>"+
 				"<p id='nosoal' >"+soal.n+"</p>"+
 				"<div style='width=300px; margin: 0px auto;'>"+
-				"<img src='http://rusiamee.000webhostapp.com/biologi/image/"+soal.g+"' style='width:100%;'></div>"+
+				"<img src='http://klubaners.web.id/biologi/image/"+soal.g+"' style='width:100%;'></div>"+
 				"<p>"+soal.p+"</p>"+
 				"<div>"+
 				"<audio controls>"+
-				"<source src='http://rusiamee.000webhostapp.com/biologi/audio/"+soal.s+"' type='audio/mp3' >"+
+				"<source src='http://klubaners.web.id/biologi/audio/"+soal.s+"' type='audio/mp3' >"+
 				"</audio>"+
 				"</div>"+
 				"<p><input type='radio' name='jwb' value='a'>"+soal.a+"</p>"+
@@ -42,7 +42,7 @@ $ ('document').ready(function(){
 		nisiswa = localStorage.getItem('nis');
 		
 		//fungsi mengirim ke server
-		$.post("http://rusiamee.000webhostapp.com/biologi/jawab.php",{
+		$.post("http://klubaners.web.id/biologi/jawab.php",{
 			nmnis: nis,
 			nmbab: bab,
 			nsoal: nomor,
@@ -61,12 +61,12 @@ $ ('document').ready(function(){
 		var ns = $('#nosoal').html();
 		var nxn = parseInt(ns)+1;
 		var nis = localStorage.getItem('nis');
-		$.getJSON('http://rusiamee.000webhostapp.com/biologi/soal.php?b='+bab+'&n='+nxn+"&nis="+nis, function (data){
+		$.getJSON('http://klubaners.web.id/biologi/soal.php?b='+bab+'&n='+nxn+"&nis="+nis, function (data){
 			//wadah dari id soal
 			$("#soal li").remove ();
 			$.each(data,function(index,soal){
 				if(parseInt(soal.n) == 0){
-					$.ajax({url:"http://rusiamee.000webhostapp.com/biologi/nilai.php?nis="+nis,success: function(nilai){
+					$.ajax({url:"http://klubaners.web.id/biologi/nilai.php?nis="+nis,success: function(nilai){
 					$('#soal').append("<li>"+
 					"<p>"+nilai+"</p>"+
 					"<a href='bab.html'>Selesai</a>"+
@@ -77,11 +77,11 @@ $ ('document').ready(function(){
 					$('#soal').append("<li>"+
 					"<p id='nosoal' >"+soal.n+"</p>"+
 				"<div style='width=300px; margin: 0px auto;'>"+
-				"<img src='http://rusiamee.000webhostapp.com/biologi/image/"+soal.g+"' style='width:100%;'></div>"+
+				"<img src='http://klubaners.web.id/biologi/image/"+soal.g+"' style='width:100%;'></div>"+
 					"<p>"+soal.p+"</p>"+
 					"<div>"+
 					"<audio controls>"+
-					"<source src='http://rusiamee.000webhostapp.com/biologi/audio/"+soal.s+"' type='audio/mp3' >"+
+					"<source src='http://klubaners.web.id/biologi/audio/"+soal.s+"' type='audio/mp3' >"+
 					"</audio>"+
 					"</div>"+
 					"<p><input type='radio' name='jwb' value='a'>"+soal.a+"</p>"+

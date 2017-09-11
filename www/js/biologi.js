@@ -2,7 +2,7 @@ $ ('document').ready(function(){
 	$("#ambilSoal").click(function(){
 			/******fungsi getjson ******/
 		var nomor = $('#nomor').val();
-		$.getJSON('http://rusiamee.000webhostapp.com/biologi/soal.php?n='+nomor, function (data){
+		$.getJSON('http://klubaners.web.id/biologi/soal.php?n='+nomor, function (data){
 			//wadah dari id soal
 			$("#soal li").remove ();
 			$.each(data,function(index,soal){

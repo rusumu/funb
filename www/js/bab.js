@@ -2,7 +2,7 @@ $('document').ready(function(){
 	var nis = localStorage.getItem('nis');
 	$("#nisiswa").html(nis);
 			/******fungsi getjson ******/
-		$.getJSON('http://rusiamee.000webhostapp.com/biologi/bab.php', function (data){
+		$.getJSON('http://klubaners.web.id/biologi/bab.php', function (data){
 			//wadah dari id soal
 			$("#bab li").remove ();
 			$.each(data,function(index,bab){

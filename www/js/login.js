@@ -10,7 +10,7 @@ $ ('document').ready(function(){
 		localStorage.setItem('nis',nis);
 		
 		// kirim ke server
-		$.post("http://rusiamee.000webhostapp.com/biologi/login.php",{
+		$.post("http://klubaners.web.id/biologi/login.php",{
 			nis:nis,
 			pwd:pwd
 		},function(result){
